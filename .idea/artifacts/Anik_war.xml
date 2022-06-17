@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="webproject:war">
+  <artifact type="war" name="Anik:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>webproject</module>
+        <module>Anik</module>
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="webproject-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="webproject:war exploded" />
+    <root id="archive" name="Anik-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Anik:war exploded" />
     </root>
   </artifact>
 </component>
