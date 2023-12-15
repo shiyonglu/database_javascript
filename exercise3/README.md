@@ -26,7 +26,7 @@ Assume you are at the project directory: mysqlreact
   choose javascript
 
 7. cd FrontEnd
-8. mpm install
+8. npm install
 9. npm run dev // start the Frontend
 
 
