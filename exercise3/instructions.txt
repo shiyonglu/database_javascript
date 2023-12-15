@@ -3,6 +3,6 @@ In this project, you will create a simple Web-based app using mysql, nodejs and 
 1. Watch video: https://www.youtube.com/watch?v=Q3ixb1w-QaY
 2. Install nodejs and npm, and packages including express, mysql, cors, and nodemon.
 3. Change the file server.js to display the results of running 10 SELECT statements. Each statement should select from at least three tables and its where clause has at least three conditions.  
-4. The code should be running to deserv full credits. 
+4. The code should be running to deserv full credits. Submit all SQL statements in a file called sql.txt. 
 
 Note: grading is based on your fluency of SQL, the success execution result of server.js showing on the web browser and your explanation skill of the result. 
