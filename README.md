@@ -8,15 +8,14 @@ Assume you are at the project directory: mysqlreact
 1. cd Backend
 2. npm init -y 
 3. npm install express mysql cors nodemon
-4. cd ..
-5. npm create vite@latest
+4. npm start // to start the Backend: the web server
+5. cd ..
+6. npm create vite@latest     // create the Frontend
   choose a project name `Frontend`
   choose react
   choose javascript
 
-6. cd FrontEnd
-7. mpm install
-8. npm run dev
-9. cd ..
-10. cd Backend
-11. npm start // to start the web server
+7. cd FrontEnd
+8. mpm install
+9. npm run dev // start the Frontend
+
