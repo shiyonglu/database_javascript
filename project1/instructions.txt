@@ -1,4 +1,4 @@
-In this project, you will create a user table and then use it to register a new user and then allows the user to sign into a website. 
+In this project, you will create a user table and then use it to register a new user and then allows the user to sign into a website. This project will take 4 weeks. 
 
 Please implement the following interface and functoinalty: 
 1. Implement the web interface and functionality for user registration.
