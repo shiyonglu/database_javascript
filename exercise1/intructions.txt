@@ -1,0 +1,6 @@
+1. Access online SQL at: https://www.programiz.com/sql/online-compiler/
+2. Create 10 tables using SQL CREATE table statements; 
+3. INSERT at least 10 tuples into each of the above table;
+4. Show 10 DELETE statements, each statement should be different from each other;
+5. Show 10 UPDATE statements, each statement should be different from each other.
+6. Please explain in voice and show in your video the result of each statement. The grade will be based on your fluency of SQL and explanation skill of the result. 
