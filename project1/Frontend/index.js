@@ -4,8 +4,8 @@
 
 // fetch call is to call the backend
 document.addEventListener('DOMContentLoaded', function() {
-    debug("reloading...");
-    fetch('http://localhost:5000/getAll')
+    // one can point your browser to http://localhost:5000/getAll to check what it returns first.
+    fetch('http://localhost:5000/getAll')     
     .then(response => response.json())
     .then(data => loadHTMLTable(data['data']));
 });
@@ -134,7 +134,7 @@ function debug(data)
 
 function insertRowIntoTable(data){
 
-   debug("frontend: insert a row");
+   debug("index.js: insertRowIntoTable called: ");
    debug(data);
 
    const table = document.querySelector('table tbody');
@@ -166,7 +166,7 @@ function insertRowIntoTable(data){
     }
     else {
         debug("case 2");
-        debug(tableHtml);
+        // debug(tableHtml);
 
         const newrow = table.insertRow();
         newrow.innerHTML = tableHtml;
@@ -174,12 +174,10 @@ function insertRowIntoTable(data){
 }
 
 function loadHTMLTable(data){
-    debug("loadHTMLTable called.");
+    debug("index.js: loadHTMLTable called.");
 
     const table = document.querySelector('table tbody'); 
-    console.log("load table");
-    console.log(table);
-
+    
     if(data.length === 0){
         table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
         return;
