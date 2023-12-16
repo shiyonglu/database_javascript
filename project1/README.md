@@ -17,5 +17,5 @@ Please implement the following interface and functoinalty:
 Show and explain the results above in a video. Submit all SQL statements in a file called sql.txt. 
 
 Note: the grading will be based on the correct result of the query, the design of the interface and your explnation skill of the results. 
-doenv is a file that you need to customerize and rename it to .env to work.
+doenv is a file that you need to customize and rename it to .env to work.
    
