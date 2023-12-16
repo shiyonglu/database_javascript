@@ -24,6 +24,16 @@ Promises have two main methods: then and catch.
     callback function that will be called when the promise is rejected, and it 
     receives the reason for the rejection.
 
+What is a promise chain? 
+    The Promise chain starts with some asyncOperation1(), which returns a promise, 
+    and each subsequent ``then`` is used to handle the result of the previous Promise.
+
+    The catch is used at the end to catch any errors that might occur at any point 
+    in the chain.
+
+    Each then returns a new Promise, allowing you to chain additional ``then`` calls to 
+    handle subsequent results.
+
 What is an arrow function?
 
     An arrow function in JavaScript is a concise way to write anonymous function 
