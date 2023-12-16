@@ -41,11 +41,17 @@ searchBtn.onclick = function (){
     .then(data => loadHTMLTable(data['data']));
 }
 
+let rowToDelete; 
+
 // when the delete button is clicked, since it is not part of the DOM tree, we need to do it differently
 document.querySelector('table tbody').addEventListener('click', 
       function(event){
         if(event.target.className === "delete-row-btn"){
-            deleteRowById(event.target.dataset.id);                
+
+            deleteRowById(event.target.dataset.id);   
+            rowToDelete = event.target.parentNode.parentNode.rowIndex;    
+            debug("delete which one:");
+            debug(rowToDelete);
         }   
         if(event.target.className === "edit-row-btn"){
             showEditRowInterface(event.target.dataset.id); // display the edit row interface
@@ -64,7 +70,8 @@ function deleteRowById(id){
     .then(
          data => {
              if(data.success){
-                location.reload();
+                document.getElementById("table").deleteRow(rowToDelete);
+                // location.reload();
              }
          }
     );
