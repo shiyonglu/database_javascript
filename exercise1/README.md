@@ -5,7 +5,9 @@
 5. Execute 10 UPDATE statements, each statement should be different from each other.
 6. Please explain in voice and show in your video the result of each statement. Submit all SQL statements in a file called sql.txt. 
 
+
 Note: The grading will be based on your fluency of SQL and explanation skill of the result. 
+
 
 ---- the following is just an example: 
 CREATE TABLE restaurants(
@@ -19,6 +21,7 @@ CREATE TABLE restaurants(
      cuisine VARCHAR(50),
      PRIMARY KEY(id)
 );
+
 
 INSERT INTO restaurants (id, name, street, city, state, zipcode, rating, cuisine)
 VALUES
