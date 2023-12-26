@@ -10,6 +10,8 @@ Note: The grading will be based on your fluency of SQL and explanation skill of 
 
 
 ---- the following is just an example: 
+
+
 CREATE TABLE restaurants(
      id SMALLINT,
      name VARCHAR(100),
