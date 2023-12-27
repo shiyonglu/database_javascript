@@ -47,6 +47,16 @@ CREATE TABLE reviews(
     UNIQUE(reviewer)
 )    
 
+
+CREATE TABBLE users(
+   id SMALLINT,
+   username VARCHAR(50),
+   password VARCHAR(50),
+   email VARCHAR(320),
+   phone VARHCAR(50), 
+   status VARCHAR(50)
+)
+
 INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
 VALUES (1, 'Reviewer1', 4.2, 'Great experience!', '2023-01-01 08:00:00');
 
