@@ -116,6 +116,9 @@ INSERT INTO reviews VALUES (9, 'macewindu', 3.9, 'Average. Nothing special.', '2
 
 INSERT INTO reviews VALUES (10, 'palpatine', 2.5, 'Terrible service. Will not return.', '2023-01-10 08:40:00');
 
+ALTER TABLE reviews
+CHANGE id restaurant_id INTEGER;
+
 ALTER TABLE users
 DROP COLUMN id;
 
