@@ -25,6 +25,9 @@ CREATE TABLE restaurants(
      PRIMARY KEY(id)
 );
 
+ALTER TABLE restaurants
+CHANGE id restaurant_id INTEGER;
+
 INSERT INTO restaurants VALUES(1, "Pizza Tavern", "123 Pawn Street", "CityValley", "MI", "33765", 4.1, "Italian");
 
 INSERT INTO restaurants VALUES(2, "Pizza Palace", "123 Main Street", "Cityville", "CA", "98765", 4.2, "Italian");
