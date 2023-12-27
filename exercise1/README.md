@@ -24,6 +24,8 @@ CREATE TABLE restaurants(
      PRIMARY KEY(id)
 );
 
+INSERT INTO restaurants VALUES(1, "Pizza Tavern", "123 Pawn Street", "CityValley", "MI", "33765", 4.1, "Italian");
+
 INSERT INTO restaurants VALUES(2, "Pizza Palace", "123 Main Street", "Cityville", "CA", "98765", 4.2, "Italian");
 
 INSERT INTO restaurants VALUES(3, "Sushi Haven", "456 Oak Avenue", "Townburg", "NY", "54321", 4.8, "Japanese");
@@ -44,6 +46,30 @@ INSERT INTO restaurants VALUES(10, "Mediterranean Magic", "606 Oak Street", "Oli
 
 INSERT INTO restaurants VALUES(11, "Breakfast Bistro", "707 Pine Avenue", "Morningville", "NY", "78901", 4.2, "Breakfast");
 
+CREATE TABLE users( id SMALLINT, username VARCHAR(50), password VARCHAR(50), email VARCHAR(320), phone VARCHAR(50), status VARCHAR(50));
+
+CREATE table users(
+   id SMALLINT,
+   username VARCHAR(50),
+   password VARCHAR(50),
+   email VARCHAR(320),
+   phone VARCHAR(50), 
+   status VARCHAR(50),
+   PRIMARY KEY(id)
+);
+
+INSERT INTO users VALUES (1, "luke", "xp34!oo3#11!", "luke2023@gmail.com", "313-234-4566", "Junior");
+INSERT INTO users VALUES (2, "leia", "secret@pass", "leia@gmail.com", "415-123-7890", "Senior");
+INSERT INTO users VALUES (3, "han", "falcon123", "han_solo@gmail.com", "818-345-6789", "Captain");
+INSERT INTO users VALUES (4, "chewie", "roar456", "chewbacca@gmail.com", "555-987-6543", "Co-Pilot");
+INSERT INTO users VALUES (5, "obiwan", "jedi_master", "obiwan@gmail.com", "212-555-1234", "Master");
+INSERT INTO users VALUES (6, "padme", "queen123", "padme@gmail.com", "703-321-7654", "Senator");
+INSERT INTO users VALUES (7, "anakin", "chosen1", "anakin_skywalker@gmail.com", "310-789-2345", "Apprentice");
+INSERT INTO users VALUES (8, "yoda", "force123", "yoda@gmail.com", "415-678-9012", "Master");
+INSERT INTO users VALUES (9, "macewindu", "purple123", "macewindu@gmail.com", "202-123-4567", "Council Member");
+INSERT INTO users VALUES (10, "palpatine", "sithlord", "palpatine@gmail.com", "666-666-6666", "Emperor");
+
+
 CREATE TABLE reviews(
     id SMALLINT,
     reviewer VARCHAR(50),
@@ -51,47 +77,29 @@ CREATE TABLE reviews(
     comment VARCHAR(200),
     postedtime DATETIME,
     UNIQUE(reviewer)
-)    
+);
 
 
-CREATE TABBLE users(
-   id SMALLINT,
-   username VARCHAR(50),
-   password VARCHAR(50),
-   email VARCHAR(320),
-   phone VARHCAR(50), 
-   status VARCHAR(50)
-)
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (1, 'Reviewer1', 4.2, 'Great experience!', '2023-01-01 08:00:00');
+INSERT INTO reviews VALUES (1, 'luke', 4.5, 'Great food and service!', '2023-01-01 12:30:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (2, 'Reviewer2', 3.8, 'Could be better.', '2023-01-02 10:30:00');
+INSERT INTO reviews VALUES (2, 'leia', 5.0, 'Amazing experience! Loved it.', '2023-01-02 15:45:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (3, 'Reviewer3', 4.5, 'Excellent service!', '2023-01-03 12:45:00');
+INSERT INTO reviews VALUES (3, 'han', 3.8, 'Decent food, but service could be improved.', '2023-01-03 18:20:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (4, 'Reviewer4', 3.9, 'Average experience.', '2023-01-04 14:15:00');
+INSERT INTO reviews VALUES (4, 'chewie', 4.2, 'Roarrr! Delicious as always.', '2023-01-04 20:10:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (5, 'Reviewer5', 4.1, 'Loved the food!', '2023-01-05 16:30:00');
+INSERT INTO reviews VALUES (5, 'obiwan', 4.7, 'The Force is strong with this restaurant.', '2023-01-05 14:00:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (6, 'Reviewer6', 4.0, 'Nice ambiance.', '2023-01-06 18:45:00');
+INSERT INTO reviews VALUES (6, 'padme', 4.0, 'Nice ambiance, but portions could be larger.', '2023-01-06 19:30:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (7, 'Reviewer7', 4.3, 'Highly recommended!', '2023-01-07 20:00:00');
+INSERT INTO reviews VALUES (7, 'anakin', 3.5, 'Not impressed. Expected better.', '2023-01-07 22:45:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (8, 'Reviewer8', 3.7, 'Could improve cleanliness.', '2023-01-08 22:15:00');
+INSERT INTO reviews VALUES (8, 'yoda', 4.8, 'Delightful, the meal was. Recommend, I will.', '2023-01-08 16:15:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (9, 'Reviewer9', 4.4, 'Amazing staff!', '2023-01-09 23:30:00');
+INSERT INTO reviews VALUES (9, 'macewindu', 3.9, 'Average. Nothing special.', '2023-01-09 11:55:00');
 
-INSERT INTO reviews (id, reviewer, rating, comment, postedtime)
-VALUES (10, 'Reviewer10', 3.5, 'Not satisfied.', '2023-01-10 01:45:00');
+INSERT INTO reviews VALUES (10, 'palpatine', 2.5, 'Terrible service. Will not return.', '2023-01-10 08:40:00');
 
 
 SELECT * FROM restaurants WHERE city = 'City3';
