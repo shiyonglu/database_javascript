@@ -82,6 +82,8 @@ INSERT INTO users VALUES (9, "macewindu", "purple123", "macewindu@gmail.com", "2
 
 INSERT INTO users VALUES (10, "palpatine", "sithlord", "palpatine@gmail.com", "666-666-6666", "Emperor");
 
+ALTER TABLE users
+DROP COLUMN id;
 
 CREATE TABLE reviews(
     id SMALLINT,
@@ -114,6 +116,11 @@ INSERT INTO reviews VALUES (9, 'macewindu', 3.9, 'Average. Nothing special.', '2
 
 INSERT INTO reviews VALUES (10, 'palpatine', 2.5, 'Terrible service. Will not return.', '2023-01-10 08:40:00');
 
+ALTER TABLE users
+DROP COLUMN id;
+
+ALTER TABLE users
+ADD PRIMARY KEY (username);
 
 SELECT * FROM restaurants WHERE city = 'City3';
 
@@ -129,14 +136,15 @@ SELECT * FROM reviews WHERE reviewer = 'Reviewer4';
 
 SELECT AVG(rating) AS average_rating FROM reviews;
 
-SELECT * FROM reviews WHERE postedtime >= CURDATE() - INTERVAL 7 DAY;
+SELECT * FROM reviews WHERE DATE(postedtime) = '2023-01-10'; 
 
-SELECT reviewer, COUNT(*) AS review_count FROM reviews GROUP BY reviewer ORDER BY review_count DESC LIMIT 1;
+
+SELECT reviewer, COUNT(*) AS review_count FROM reviews GROUP BY reviewer ORDER BY review_count DESC LIMIT 1; // select the reviewer who gives the most number of reviews
 
 SELECT * FROM reviews WHERE LOWER(comment) LIKE '%delicious%';
 
 
-SELECT r.name AS restaurant_name, AVG(re.rating) AS average_rating
+SELECT r.name AS restaurant_name, AVG(re.rating) AS average_rating           // average rating for each restaurant
 FROM restaurants r, reviews re
 WHERE r.id = re.id
 GROUP BY r.id;
