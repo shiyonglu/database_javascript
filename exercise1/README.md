@@ -122,9 +122,6 @@ SELECT state, COUNT(*) AS restaurant_count FROM restaurants GROUP BY state;
 
 SELECT * FROM restaurants WHERE rating > 4.0;
 
-SELECT * FROM reviews WHERE reviewer = 'SpecificReviewer';
-
-
 SELECT * FROM reviews WHERE reviewer = 'Reviewer4';
 
 SELECT AVG(rating) AS average_rating FROM reviews;
