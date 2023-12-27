@@ -24,19 +24,16 @@ CREATE TABLE restaurants(
      PRIMARY KEY(id)
 );
 
-
-INSERT INTO restaurants (id, name, street, city, state, zipcode, rating, cuisine)
-VALUES
-  (1, 'Restaurant1', 'Street1', 'City1', 'State1', '12345', 4.2, 'Cuisine1'),
-  (2, 'Restaurant2', 'Street2', 'City2', 'State2', '67890', 3.8, 'Cuisine2'),
-  (3, 'Restaurant3', 'Street3', 'City3', 'State3', '23456', 4.5, 'Cuisine3'),
-  (4, 'Restaurant4', 'Street4', 'City4', 'State4', '78901', 3.9, 'Cuisine4'),
-  (5, 'Restaurant5', 'Street5', 'City5', 'State5', '34567', 4.1, 'Cuisine5'),
-  (6, 'Restaurant6', 'Street6', 'City6', 'State6', '89012', 4.0, 'Cuisine6'),
-  (7, 'Restaurant7', 'Street7', 'City7', 'State7', '45678', 4.3, 'Cuisine7'),
-  (8, 'Restaurant8', 'Street8', 'City8', 'State8', '90123', 3.7, 'Cuisine8'),
-  (9, 'Restaurant9', 'Street9', 'City9', 'State9', '56789', 4.4, 'Cuisine9'),
-  (10, 'Restaurant10', 'Street10', 'City10', 'State10', '01234', 3.5, 'Cuisine10');
+INSERT INTO restaurants VALUES(2, "Pizza Palace", "123 Main Street", "Cityville", "CA", "98765", 4.2, "Italian");
+INSERT INTO restaurants VALUES(3, "Sushi Haven", "456 Oak Avenue", "Townburg", "NY", "54321", 4.8, "Japanese");
+INSERT INTO restaurants VALUES(4, "Taco Town", "789 Maple Lane", "Burrito City", "TX", "12345", 3.9, "Mexican");
+INSERT INTO restaurants VALUES(5, "Pasta Paradise", "101 Pine Road", "Spaghettiville", "FL", "67890", 4.1, "Italian");
+INSERT INTO restaurants VALUES(6, "Steakhouse Supreme", "202 Cedar Drive", "Grillington", "AZ", "54321", 4.7, "Steakhouse");
+INSERT INTO restaurants VALUES(7, "Seafood Shack", "303 Birch Street", "Fishville", "CA", "87654", 4.4, "Seafood");
+INSERT INTO restaurants VALUES(8, "Veggie Delight", "404 Elm Boulevard", "Greensburg", "CO", "34567", 4.0, "Vegetarian");
+INSERT INTO restaurants VALUES(9, "BBQ Bliss", "505 Walnut Lane", "Smoketown", "TX", "23456", 4.6, "Barbecue");
+INSERT INTO restaurants VALUES(10, "Mediterranean Magic", "606 Oak Street", "Olivetown", "FL", "65432", 4.3, "Mediterranean");
+INSERT INTO restaurants VALUES(11, "Breakfast Bistro", "707 Pine Avenue", "Morningville", "NY", "78901", 4.2, "Breakfast");
 
 CREATE TABLE reviews(
     id SMALLINT,
