@@ -11,6 +11,7 @@ Note: The grading will be based on your fluency of SQL and explanation skill of 
 
 ---- the following is just an example: 
 
+```SQL
 
 CREATE TABLE restaurants(
      id SMALLINT,
@@ -59,14 +60,23 @@ CREATE table users(
 );
 
 INSERT INTO users VALUES (1, "luke", "xp34!oo3#11!", "luke2023@gmail.com", "313-234-4566", "Junior");
+
 INSERT INTO users VALUES (2, "leia", "secret@pass", "leia@gmail.com", "415-123-7890", "Senior");
+
 INSERT INTO users VALUES (3, "han", "falcon123", "han_solo@gmail.com", "818-345-6789", "Captain");
+
 INSERT INTO users VALUES (4, "chewie", "roar456", "chewbacca@gmail.com", "555-987-6543", "Co-Pilot");
+
 INSERT INTO users VALUES (5, "obiwan", "jedi_master", "obiwan@gmail.com", "212-555-1234", "Master");
+
 INSERT INTO users VALUES (6, "padme", "queen123", "padme@gmail.com", "703-321-7654", "Senator");
+
 INSERT INTO users VALUES (7, "anakin", "chosen1", "anakin_skywalker@gmail.com", "310-789-2345", "Apprentice");
+
 INSERT INTO users VALUES (8, "yoda", "force123", "yoda@gmail.com", "415-678-9012", "Master");
+
 INSERT INTO users VALUES (9, "macewindu", "purple123", "macewindu@gmail.com", "202-123-4567", "Council Member");
+
 INSERT INTO users VALUES (10, "palpatine", "sithlord", "palpatine@gmail.com", "666-666-6666", "Emperor");
 
 
@@ -130,7 +140,7 @@ SELECT r.name AS restaurant_name, AVG(re.rating) AS average_rating
 FROM restaurants r, reviews re
 WHERE r.id = re.id
 GROUP BY r.id;
-
+```
 
 
 
