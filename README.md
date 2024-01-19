@@ -6,3 +6,8 @@ The database class workload will have the following components:
 4. Project 1   30%, ONE partner
 5. Project 2:  50%, no partner.
 
+1. Intall Ubuntu into Windows
+   https://www.redswitches.com/blog/use-wsl2-to-install-ubuntu-on-windows/
+2. Install Mysql into Ubuntu
+   https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+3. 
