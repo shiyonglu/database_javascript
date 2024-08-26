@@ -1,9 +1,11 @@
+# Exercise 1
+
 1. Access online SQL at: https://www.programiz.com/sql/online-compiler/
-2. Create 10 tables using SQL CREATE table statements; 
-3. INSERT at least 10 tuples into each of the above table using the INSERT statements;
-4. Execute 10 DELETE statements, each statement should be different from each other;
-5. Execute 10 UPDATE statements, each statement should be different from each other.
-6. Please explain in voice and show in your video the result of each statement. Submit all SQL statements in a file called sql.txt. 
+1. Create 10 tables using SQL CREATE table statements; 
+1. INSERT at least 10 tuples into each of the above table using the INSERT statements;
+1. Execute 10 DELETE statements, each statement should be different from each other;
+1. Execute 10 UPDATE statements, each statement should be different from each other.
+1. For submission, you will have to record a vide. More instructions on the video recording process is given in submisison section below. Please explain in voice and show in your video the result of each query statement. Submit all SQL statements in a file called sql.txt. along with your video submission. 
 
 
 Note: The grading will be based on your fluency of SQL and explanation skill of the result. 
@@ -154,7 +156,15 @@ GROUP BY r.id;
 ```
 
 
+# Submission:
 
+1. Record your screen as a video (4 to 10 minutes) to show the proof that you have completed this exercise and explain how you do it step by step;
+
+You can use an online service https://www.apowersoft.com/free-online-screen-recorder (Links to an external site.) to record a screen demo. Do not download the software, only download the plug-in for your browser for the first time and then come back to the website to record all future videos. If you still need help join the TA office hour.
+
+2. Upload the video to your youtube channel; and make sure that the video is available for the grader to be viewed. You can make the video url public. Thest by viewing the link from an incognito window. 
+
+3. Submit the URL of the video to Canvas/Assignments.
 
 
   
