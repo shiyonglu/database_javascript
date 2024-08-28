@@ -15,8 +15,8 @@ Note: grading is based on your fluency of SQL, the success execution result of s
 
 To get the sample project working: 
 1. Crate a directory called ```reactmysql``` as your project directory. 
-2. Under ```reactmysql```, create two directories ```Backend``` and ```Frontend```. 
-3. Copy the files under Backend and Frontend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to their respective directories.
+2. Under ```reactmysql```, create directory ```Backend```. 
+3. Copy the files under Backend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to Backend.
 4. Create a table called students in the ``test`` database as follows:
 
 ```SQL
@@ -45,5 +45,9 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
 ```
 9. Start the backend: 1) ```cd Backend```, and run ```npm start```.
 10. Point your brower to ```localhost: 8081``` and ```locahost:8081/listall``` to browse two end points. The later should show the content of the students table.
+11. At the project home directory, run ```npm create vite@latest```, type ```Frontend``` as the project name, and choose ```react``` and ```javascript```.
+12. Replace the App.jsx file under Frontend/src by the one under https://github.com/shiyonglu/database_javascript/tree/main/exercise3/Frontend.
+13. Run ```npm install```
+14. Run ```npm run dev``` and then point your browser to ```http://localhost:5173/``` which should show the page that displays the query result of the students table. 
 
 
