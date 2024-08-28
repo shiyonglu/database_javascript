@@ -54,6 +54,10 @@ DELETE
 FROM restaurants
 WHERE restaurant_id = 3;
 
+UPDATE restaurants
+SET rating = 5.0
+WHERE restaurant_id = 1;
+
 CREATE TABLE users( id SMALLINT, username VARCHAR(50), password VARCHAR(50), email VARCHAR(320), phone VARCHAR(50), status VARCHAR(50));
 
 CREATE table users(
