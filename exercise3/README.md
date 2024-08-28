@@ -48,7 +48,10 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
 
 ```
 
-3. Modify the scripts section of the Backend/package.json as follows:
+3. cd Backend
+4. npm init -y
+5. npm install express mysql cors nodemon
+6. Modify the scripts section of the Backend/package.json as follows:
 
 ```javascript
  "scripts": {
@@ -56,7 +59,7 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
     "start": "nodemon server.js"
   },
 ```
-4. Start the backend: 1) ```cd Backend```, and run ```npm start```.
-5. Point your brower to ```localhost: 8081``` and ```locahost:8081/listall``` to browse two end points. The later should show the content of the students table.
+7. Start the backend: 1) ```cd Backend```, and run ```npm start```.
+8. Point your brower to ```localhost: 8081``` and ```locahost:8081/listall``` to browse two end points. The later should show the content of the students table.
 
 
