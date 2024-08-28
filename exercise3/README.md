@@ -46,7 +46,7 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
 
 ```
 
-3. Modify the scripts section of hte Backend/package.json as follows:
+3. Modify the scripts section of the Backend/package.json as follows:
 
 ```javascript
  "scripts": {
