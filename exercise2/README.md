@@ -1,5 +1,5 @@
-In this exercise, you will further enhance your SQL fluency using the XAMPP framework (Apache web server + mysql)
-1. Download and install XAMPP and familiarize yourself all aspects of XAMPP. Install from: https://www.apachefriends.org/
+In this exercise, you will further enhance your SQL fluency using the XAMPP framework (Apache web server + MySql)
+1. Download and install XAMPP (https://www.apachefriends.org/). 
 2. Launch XAMPP control panel (by searching XAMPP in the search box).
 3. Start the Apache Web server and the MySql database server by clicking their start button.
 4. Click the Admin button on the MySql row to start the phpMyAdmin web interface to interact with MySql via GUI and SQL statements. 
