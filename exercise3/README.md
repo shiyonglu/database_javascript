@@ -46,4 +46,12 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
 
 ```
 
+3. Modify the scripts section of hte Backend/package.json as follows:
+
+```javascript
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+```
 
