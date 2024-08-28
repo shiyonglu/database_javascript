@@ -50,6 +50,10 @@ INSERT INTO restaurants VALUES(10, "Mediterranean Magic", "606 Oak Street", "Oli
 
 INSERT INTO restaurants VALUES(11, "Breakfast Bistro", "707 Pine Avenue", "Morningville", "NY", "78901", 4.2, "Breakfast");
 
+DELETE
+FROM restaurants
+WHERE restaurant_id = 3;
+
 CREATE TABLE users( id SMALLINT, username VARCHAR(50), password VARCHAR(50), email VARCHAR(320), phone VARCHAR(50), status VARCHAR(50));
 
 CREATE table users(
