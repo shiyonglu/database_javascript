@@ -29,4 +29,21 @@ Assume you are at the project directory: mysqlreact
 8. npm install
 9. npm run dev // start the Frontend
 
+To get the sample project working: 
+1. Copy the files under Backend and Frontend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to their respective directories.
+2. Create a table called students in the ``test`` database as follows:
+
+```SQL
+CREATE TABLE students (id SMALLINT, name VARCHAR(100), birthday DATE, gpa FLOAT);
+
+INSERT INTO students (1, "peter", '08-22-1988', 3.1);
+
+INSERT INTO students (2, "kathy", '08-12-1997', 3.2);
+
+INSERT INTO students (3, "mike", '08-02-1999', 3.3);
+
+INSERT INTO students (4, "john", '06-13-1998', 3.7);
+
+```
+
 
