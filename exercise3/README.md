@@ -22,13 +22,13 @@ To get the sample project working:
 ```SQL
 CREATE TABLE students (id SMALLINT, name VARCHAR(100), birthday DATE, gpa FLOAT);
 
-INSERT INTO students VALUE (1, "peter", '08-22-1988', 3.1);
+INSERT INTO students VALUE (1, "peter", '1988-08-22', 3.1);
 
-INSERT INTO students VALUE (2, "kathy", '08-12-1997', 3.2);
+INSERT INTO students VALUE (2, "kathy", '1997-08-12', 3.2);
 
-INSERT INTO students VALUE (3, "mike", '08-02-1999', 3.3);
+INSERT INTO students VALUE (3, "mike", '1999-08-02', 3.3);
 
-INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
+INSERT INTO students VALUE (4, "john", '1998-06-13', 3.7);
 
 ```
 
