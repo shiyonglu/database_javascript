@@ -30,6 +30,8 @@ Assume you are at the project directory: mysqlreact
 9. npm run dev // start the Frontend
 
 To get the sample project working: 
+1. Crate a directory called ```reactmysql``` as your project directory. 
+2. Under ```reactmysql```, create two directories ```Backend``` and ```Frontend```. 
 1. Copy the files under Backend and Frontend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to their respective directories.
 2. Create a table called students in the ``test`` database as follows:
 
@@ -54,4 +56,7 @@ INSERT INTO students VALUE (4, "john", '06-13-1998', 3.7);
     "start": "nodemon server.js"
   },
 ```
+4. Start the backend: 1) ```cd Backend```, and run ```npm start```.
+5. Point your brower to ```localhost: 8081``` and ```locahost:8081/listall``` to browse two end points. The later should show the content of the students table.
+
 
