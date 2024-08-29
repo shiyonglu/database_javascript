@@ -22,4 +22,18 @@ Note: the grading will be based on the correct result of the query, the design o
 doenv is a file that you need to customize and rename it to .env to work.
 
 **How to run the sample code**
-
+1. We will use the Apache web server. Create the first webpage index.html under ```C:\xampp\htdocs>``` (or similar directory where you installed XAMPP) and point your browser to ```http://localhost/index.html```. You should see your first webpage.
+2. At ```C:\xampp\htdocs```, run ```git clone https://github.com/shiyonglu/database_javascript.git``` to copy the whole sample code to the current directory.
+3. The Frontend of the project is ```http://localhost/database_javascript/project1/Frontend/index.html```, point your browser to this URL and you should see the initial interface.
+4. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
+5. npm init -y
+6. npm install express mysql cors nodemon dotenv
+7. Modify the scripts section of the Backend/package.json as follows:
+   ```javasript
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+   ```
+8. start the backend by running ```npm start```.
+9. Now you can interact with the Frontend ```http://localhost/database_javascript/project1/Frontend/index.html```. 
