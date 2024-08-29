@@ -25,10 +25,15 @@ doenv is a file that you need to customize and rename it to .env to work.
 1. We will use the Apache web server. Create the first webpage index.html under ```C:\xampp\htdocs>``` (or similar directory where you installed XAMPP) and point your browser to ```http://localhost/index.html```. You should see your first webpage.
 2. At ```C:\xampp\htdocs```, run ```git clone https://github.com/shiyonglu/database_javascript.git``` to copy the whole sample code to the current directory.
 3. The Frontend of the project is ```http://localhost/database_javascript/project1/Frontend/index.html```, point your browser to this URL and you should see the initial interface.
-4. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
-5. npm init -y
-6. npm install express mysql cors nodemon dotenv
-7. Modify the scripts section of the Backend/package.json as follows:
+4. Configure the MySql database according to ```C:\xampp\htdocs\database_javascript\project1\dotenv```, that is, to create a database called ```web_app``` and a user ```john``` with password ```1234``` via the Admin interface ```http://localhost/phpmyadmin/```. The user ```john``` is for the ```web_app``` database. 
+5.  Under the database ```web_app```, create an empty table as follows: 
+```SQL
+CREATE TABLE names (name VARCHAR(100), data_added DATA);
+```
+6. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
+7. npm init -y
+8. npm install express mysql cors nodemon dotenv
+9. Modify the scripts section of the Backend/package.json as follows:
 ```javasript
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
