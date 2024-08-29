@@ -29,11 +29,11 @@ doenv is a file that you need to customize and rename it to .env to work.
 5. npm init -y
 6. npm install express mysql cors nodemon dotenv
 7. Modify the scripts section of the Backend/package.json as follows:
-   ```javasript
+```javasript
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-   ```
+```
 8. start the backend by running ```npm start```.
 9. Now you can interact with the Frontend ```http://localhost/database_javascript/project1/Frontend/index.html```. 
