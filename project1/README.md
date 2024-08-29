@@ -50,4 +50,5 @@ create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), da
   },
 ```
 8. Start the Backend by running ```npm start```.
-9. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html). 
+9. Feel free to access some of the Backend endpoints directly such as [http://localhost:5000/getall](http://localhost:5000/getall). You will only receive JSON data without nice rendering. 
+10. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html). 
