@@ -34,7 +34,7 @@ DATABASE=web_app
 DB_PORT=3306
 HOST=localhost
 ```
-5. You need to rename dotenv to .env by running ```move dotenv .env```.
+5. You need to rename dotenv to .env by command ```move dotenv .env```.
 6.  Under the database ```web_app```, create an empty table as follows: 
 ```SQL
 CREATE TABLE names (name VARCHAR(100), data_added DATE);
