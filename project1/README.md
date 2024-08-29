@@ -35,5 +35,5 @@ doenv is a file that you need to customize and rename it to .env to work.
     "start": "nodemon server.js"
   },
 ```
-8. start the backend by running ```npm start```.
+8. Start the Backend by running ```npm start```.
 9. Now you can interact with the Frontend ```http://localhost/database_javascript/project1/Frontend/index.html```. 
