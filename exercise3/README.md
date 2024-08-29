@@ -9,7 +9,7 @@ In this project, you will create a simple Web-based app using mysql, nodejs and 
 
 Note: grading is based on your fluency of SQL, the success execution result of server.js showing on the web browser and your explanation skill of the result. 
 
--------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 **How to run the given sample code**
 
