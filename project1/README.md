@@ -28,7 +28,7 @@ doenv is a file that you need to customize and rename it to .env to work.
 4. Configure the MySql database according to ```C:\xampp\htdocs\database_javascript\project1\dotenv```, that is, to create a database called ```web_app``` and a user ```john``` with password ```1234``` via the Admin interface ```http://localhost/phpmyadmin/```. The user ```john``` is for the ```web_app``` database. 
 5.  Under the database ```web_app```, create an empty table as follows: 
 ```SQL
-CREATE TABLE names (name VARCHAR(100), data_added DATA);
+CREATE TABLE names (name VARCHAR(100), data_added DATE);
 ```
 6. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
 7. npm init -y
