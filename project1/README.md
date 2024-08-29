@@ -1,3 +1,5 @@
+**Project description**
+
 In this project, you will create a user table and then use it to register a new user and then allows the user to sign into a website. This project will take 4 weeks. 
 
 Watch this video: https://www.youtube.com/watch?v=vrj9AohVhPA
@@ -18,4 +20,6 @@ Show and explain the results above in a video. Submit all SQL statements in a fi
 
 Note: the grading will be based on the correct result of the query, the design of the interface and your explnation skill of the results. 
 doenv is a file that you need to customize and rename it to .env to work.
-   
+
+**How to run the sample code**
+
