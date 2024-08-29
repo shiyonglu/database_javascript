@@ -37,7 +37,7 @@ HOST=localhost
 5. You need to rename dotenv to .env by command ```move dotenv .env```.
 6.  Under the database ```web_app```, create an empty table as follows: 
 ```SQL
-CREATE TABLE names (name VARCHAR(100), data_added DATE);
+create table names (id INTEGER AUTO_INCREMENT, name VARCHAR(100), date_added DATE);
 ```
 7. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
 8. npm init -y
