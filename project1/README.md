@@ -18,8 +18,20 @@ Please implement the following interface and functoinalty:
 
 Show and explain the results above in a video. Submit all SQL statements in a file called sql.txt. 
 
-Consider to create the user table using the following CREATE TABLE stmt: 
+Consider to create the user table using the following CREATE TABLE stmt (feel free to revise it): 
 
+
+```SQL
+CREATE TABLE Users(
+   userid VARCHAR(50) primary key,
+   firstname VARCHAR(50),
+   lastname VARCHAR(50),
+   salary FLOAT,
+   age INTEGER,
+   registerday DATE,
+   signintime DATETIME
+) 
+```
 
 
 Note: the grading will be based on the correct result of the query, the design of the interface and your explnation skill of the results. 
