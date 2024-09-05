@@ -11,12 +11,16 @@ Please implement the following interface and functoinalty:
 4. search users by userid;
 5. search all users whose salary is between X and Y. 
 6. Search all users whose ages are between X and Y.
-7. Search users who signed up after john signed up.
-8. search users who never signed in after signing up.
+7. Search users who registered after john registered, where ```john``` is the userid.
+8. search users who never signed in.
 9. Search users who registered on the same day that john registered. 
-10. Return the users who signed up today;
+10. Return the users who registered today;
 
 Show and explain the results above in a video. Submit all SQL statements in a file called sql.txt. 
+
+Consider to create the user table using the following CREATE TABLE stmt: 
+
+
 
 Note: the grading will be based on the correct result of the query, the design of the interface and your explnation skill of the results. 
 doenv is a file that you need to customize and rename it to .env to work.
