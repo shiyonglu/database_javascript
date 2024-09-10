@@ -133,6 +133,12 @@ DROP COLUMN id;
 ALTER TABLE users
 ADD PRIMARY KEY (username);
 
+SELECT * FROM restaurants;
+
+SELECT * FROM reviews;
+
+SELECT * FROM users;
+
 SELECT * FROM restaurants WHERE city = 'City3';
 
 SELECT * FROM restaurants ORDER BY rating DESC;
