@@ -6,20 +6,8 @@ const cors = require ('cors') // Imports the cors module, which enables Cross-Or
 
 
 const app = express() // Creates an instance of an Express application.
-
-const dbconn = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "test"
-})
-
-const express = require('express');
-const mysql = require('mysql')
-const cors = require('cors')
-
-const app = express() // creates an express instance
 app.use(cors()) // Applies the CORS middleware to the Express app.
+
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -48,7 +36,7 @@ app.get('/', (request, response) => {
 // when the browser points to localhost:8081/listall
 app.get('/listall', (request, response) => {
     const stmt = "SELECT * FROM students"
-    dbconn.query(stmt, (err, data) => {
+    db.query(stmt, (err, data) => {
         if(err) return response.json(err)
         else return response.json(data)
     })
