@@ -1,9 +1,11 @@
-const express = require('express')
-const mysql = require('mysql')
-const cors = require ('cors')
+const express = require('express') // Imports the express module, which is a web application framework for Node.js. It simplifies routing and handling HTTP requests.
+
+const mysql = require('mysql')  //  Imports the mysql module, which allows Node.js to interact with MySQL databases.
+
+const cors = require ('cors') // Imports the cors module, which enables Cross-Origin Resource Sharing, allowing your server to handle requests from different origins.
 
 
-const app = express()
+const app = express() // Creates an instance of an Express application.
 
 const dbconn = mysql.createConnection({
     host: "localhost",
@@ -16,8 +18,8 @@ const express = require('express');
 const mysql = require('mysql')
 const cors = require('cors')
 
-const app = express()
-app.use(cors())
+const app = express() // creates an express instance
+app.use(cors()) // Applies the CORS middleware to the Express app.
 
 const db = mysql.createConnection({
     host: "localhost",
