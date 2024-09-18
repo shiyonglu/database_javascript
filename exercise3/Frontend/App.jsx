@@ -1,16 +1,16 @@
 
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react' // Imports the React library
 
 function App() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]) //  Initializes a state variable called data and a function setData to update this state.
     
-    useEffect(() => {
+    useEffect(() => {                               // define the userEffect hook, useEffect(() => { ... }, [])
        fetch('http://localhost:8081/listall')       // call backend route
-       .then(response => response.json())
-       .then(data => setData(data))
+       .then(response => response.json())           // Converts the response from the fetch request into JSON format.
+       .then(data => setData(data))                 // Updates the state variable data with the fetched data using the setData function.
        .catch(err => console.log(err));
     }, [])
-return(
+return(                                             // to be rendered in the UI
     <div>
        <table class="styled-table">
        <thead>
@@ -20,7 +20,7 @@ return(
           <th>gpa</th>
        </thead>
        <tbody>
-             {data.map((d, i) => (
+             {data.map((d, i) => (                 // Maps over the data array to create a table row (<tr>) for each item d in data. The index i is used as a unique key for each row.
                   <tr key={i}>
                     <td>{d.id}</td>
                     <td>{d.name}</td>
