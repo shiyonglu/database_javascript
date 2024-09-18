@@ -15,7 +15,7 @@ In this exercise, you will further enhance your SQL fluency using the XAMPP fram
 ### Instruction for Mac:
 
  
-1. Download and install XAMPP from the official website, and on macOS, before the first installation attempt, ensure you check System Preferences > Security & Privacy > General and select App Store and identified developers. After the initial attempt, if XAMPP is blocked, revisit the same settings, where you will see XAMPP on the block list—click Open Anyway to proceed with the installation.
+1. Download and install XAMPP from https://www.apachefriends.org/. If you're using an M1 or M2 Mac, the latest version may not work for you. Instead, install xampp-osx-8.1.6-0-installer.dmg from https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.1.6/. On macOS, before the first installation attempt, go to System Preferences > Security & Privacy > General and select App Store and identified developers. If XAMPP is blocked after the initial attempt, revisit the same settings and click Open Anyway to proceed with the installation.
 2. Launch the XAMPP Control Panel by searching for "XAMPP" using Spotlight Search.
 3. Start the Apache Web Server and the MySQL Database Server by clicking their respective "Start" buttons. If both buttons turn green, the services have successfully started.
 4.  Open a browser and visist    http://localhost/phpmyadmin/  to access the mysql admin pannel. There in the sql tab you will be able to execute your query.
