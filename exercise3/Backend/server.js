@@ -38,42 +38,35 @@ db.connect((err) => {
 });
 
 
-app.get('/', (re, res) => {
-    return res.json("Welcome to the DB class.");
-})
-
-app.get('/listall', (request, response) => {
-    console.log("run sql now");
-    const sql = "SELECT * from students"
-    db.query(sql, (err, data) => {
-        if(err) return response.json(err);
-        else return response.json(data);
-    })
- 
-})
-
-app.listen(8081, () => {
-    console.log("listening")
-})
-
-
-
 app.use(cors());
 
+// when the browser points to localhost:8081/
+app.get('/', (request, response) => { 
+     return response.json("Welcome to the DB class.")
+});
 
 // when the browser points to localhost:8081/listall
 app.get('/listall', (request, response) => {
-    const stmt = "SELECT * FROM Students"
+    const stmt = "SELECT * FROM students"
     dbconn.query(stmt, (err, data) => {
         if(err) return response.json(err)
         else return response.json(data)
     })
 });
 
-// when the browser points to localhost:8081/
-app.get('/', (request, response) => { 
-     return response.json("Welcome to the DB class.")
+// when the browser points to localhost:8081/student/x, where x = 1, 2, 3...
+app.get('/student/:id', (request, response) => {
+    const studentId = request.params.id; // Extract the ID from the URL
+    console.log(`Fetching student with ID: ${studentId}`);
+    
+    const sql = "SELECT * FROM students WHERE id = ?";
+    db.query(sql, [studentId], (err, data) => {
+        if (err) return response.json(err);
+        if (data.length === 0) return response.status(404).json({ message: "Student not found" });
+        return response.json(data[0]); // Return the student object
+    });
 });
+
 
 // set up the web server listener
 app.listen(8081, () => {
