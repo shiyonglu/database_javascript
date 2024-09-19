@@ -44,8 +44,7 @@ INSERT INTO students VALUE (4, "john", '1998-06-13', 3.7);
   },
 ```
 9. Start the backend: 1) ```cd Backend```, and run ```npm start```.
-10. Now you can access the Backend endoints directly. For example, you can point your brower to [http://localhost:8081](http://localhost:8081) and
-11. [http://localhost:8081/listall](http://localhost:8081/listall). The later should show the content of the students table in JSON format.
+10. Now you can access the Backend endoints directly. For example, you can point your brower to [http://localhost:8081](http://localhost:8081) and [http://localhost:8081/listall](http://localhost:8081/listall). The later should show the content of the students table in JSON format.
 12. At the project home directory, run ```npm create vite@latest```, type ```Frontend``` as the project name, and choose ```react``` and ```javascript```.
 14. Replace the App.jsx file under Frontend/src by the one under https://github.com/shiyonglu/database_javascript/tree/main/exercise3/Frontend. Open a new terminal to run the following commands.
 15. cd Frontend
