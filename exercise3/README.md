@@ -14,7 +14,7 @@ Note: grading is based on your fluency of SQL, the success execution result of s
 **How to run the given sample code**
 
 To get the sample project working: 
-1. Crate a directory called ```reactmysql``` as your project directory. 
+1. In your file system, create a directory called ```reactmysql``` as your project directory. 
 2. Under ```reactmysql```, create directory ```Backend```. 
 3. Copy the files under Backend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to Backend.
 4. Create a table called students in the ``test`` database as follows:
