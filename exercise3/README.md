@@ -6,8 +6,8 @@ In this project, you will create a simple Web-based app using mysql, nodejs and 
 3. Install nodejs and npm, and packages including express, mysql, cors, and nodemon.
 4. Change the frontend code (index.html, main.jsx, and App.jsx) and the backend code (server.js) from the sample code to display the results of running 10 SELECT statements, each of them should select from at least TWO tables and its where clause has at least two conditions.  
 
-Example 1: ```SELECT crscode FROM Students, Transcript WHERE students.id = Transcript.studentid AND transcipt.semester = 'Fall2007'```
-Exmaple 2: ```SELECT People.name FROM People, Hobbies WHERE People.id = Hobbies.peopleid and Hobbies.hobby = 'swimming' ```
+     Example 1: ```SELECT crscode FROM Students, Transcript WHERE students.id = Transcript.studentid AND transcipt.semester = 'Fall2007'```
+     Exmaple 2: ```SELECT People.name FROM People, Hobbies WHERE People.id = Hobbies.peopleid and Hobbies.hobby = 'swimming' ```
 
 5. The code should be running to deserve full credits. Submit all SQL statements in a file called sql.txt. 
 
