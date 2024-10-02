@@ -72,5 +72,6 @@ create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), da
 ---------------------------------------
 Some tips: 
 1. In Mac, to see what process runs on port 5000, type ```lsof -i:5000```
-2. If you need to kill the process on port 5000, type ```kill -9 $(lsof -t -i:5000)```
+3. In Mac, to kill the process on port 5000, type ```kill -9 $(lsof -t -i:5000)```
+4. In Windows, to see what process runs on port 5000, type ```netstat -ano | findstr 5000```
 
