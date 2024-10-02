@@ -13,7 +13,8 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "test"
+    database: "test",
+    port: 3036
 })
 
 // let's see whether we can connect to the database successfully or not
