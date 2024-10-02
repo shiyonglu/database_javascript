@@ -75,4 +75,6 @@ Some tips:
 3. In Mac, to kill the process on port 5000, type ```kill -9 $(lsof -t -i:5000)```
 4. In Windows, to see what process runs on port 5000, type ```netstat -ano | findstr 5000```
 5. In Windows, to kill a process id = 40356, type ```taskkill /F /PID 40356```
+6. Mac uses port 5000 for AirPlay already, so you need to disable it if you want to use the same port, see [this blog](https://www.reddit.com/r/perl/comments/10p8p39/macos_port_5000_mystery_solved/)
+   
 
