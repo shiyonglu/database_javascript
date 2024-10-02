@@ -14,7 +14,7 @@ const db = mysql.createConnection({
     user: "root",
     password: "",
     database: "test",
-    port: 3036
+    port: 3306
 })
 
 // let's see whether we can connect to the database successfully or not
