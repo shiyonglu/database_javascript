@@ -112,7 +112,7 @@ app.post('/debug', (request, response) => {
     return response.json({success: true});
 });   
 
-// debug function: use http://localhost:5000/testdb to try a DB function
+// debug function: use http://localhost:5050/testdb to try a DB function
 // should be deleted finally
 app.get('/testdb', (request, response) => {
     
