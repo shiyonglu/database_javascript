@@ -43,7 +43,7 @@ doenv is a file that you need to customize and rename it to .env to work.
 3. Now you can access the Frontend via [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html).
 4. Configure the MySql database according to ```C:\xampp\htdocs\database_javascript\project1\Backend\dotenv```, that is, to create a database called ```web_app``` and a user ```john``` with password ```1234``` via the Admin interface ```http://localhost/phpmyadmin/```. The user ```john``` will be granted with all priviledges for the ```web_app``` database. To get started, you might also change the file as follows to only use the root user:
 ```javascript
-PORT=5000
+PORT=5050
 USER=root
 PASSWORD=
 DATABASE=web_app
@@ -66,7 +66,7 @@ create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), da
   },
 ```
 11. Start the Backend by running ```npm start```.
-12. Feel free to access some of the Backend endpoints directly such as [http://localhost:5000/getall](http://localhost:5000/getall). You will only receive JSON data without nice rendering. 
+12. Feel free to access some of the Backend endpoints directly such as [http://localhost:5050/getAll](http://localhost:5050/getAll). You will only receive JSON data without nice rendering. 
 13. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html).
 
 ---------------------------------------
