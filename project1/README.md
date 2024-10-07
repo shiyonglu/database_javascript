@@ -62,7 +62,7 @@ create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), da
 ```javasript
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
 ```
 11. Start the Backend by running ```npm start```.
