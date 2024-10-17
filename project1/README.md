@@ -24,7 +24,7 @@ Consider to create the user table using the following CREATE TABLE stmt (feel fr
 ```SQL
 CREATE TABLE Users(
    username VARCHAR(50) primary key,
-   password VARCHAR(50), // if you like security, save the encrypted version or a hash of the password, but a plain password is ok too for this project
+   password VARCHAR(50), // maybe encrypted or a hash?
    firstname VARCHAR(50),
    lastname VARCHAR(50),
    salary FLOAT,
