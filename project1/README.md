@@ -50,7 +50,7 @@ DATABASE=web_app
 DB_PORT=3306
 HOST=localhost
 ```
-5. You need to rename dotenv to .env by command ```move dotenv .env```.
+5. You need to rename dotenv to .env by command ```move dotenv .env```. Another way is to configure these parameters directly inside the ```dbService.js``` file.
 6.  Under the database ```web_app```, create an empty table as follows: 
 ```SQL
 create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), date_added DATE);
