@@ -127,15 +127,19 @@ app.get('/testdb', (request, response) => {
 });
 
 
-  
-
-
-
-
-
 // set up the web server listener
+// if we use .env to configure
+/*
 app.listen(process.env.PORT, 
     () => {
-        console.log("I am listening.")
+        console.log("I am listening on the configured port " + process.env.PORT)
+    }
+);
+*/
+
+// if we configure here directly
+app.listen(5050, 
+    () => {
+        console.log("I am listening on the fixed port 5050.")
     }
 );
