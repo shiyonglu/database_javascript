@@ -6,7 +6,7 @@ Watch this video: https://www.youtube.com/watch?v=vrj9AohVhPA
 
 Please implement the following interface and functoinalty: 
 1. User registration.
-2. User sign-in.
+2. User sign-in, make sure your impelementation is not subject to [SQL injection attack](https://portswigger.net/support/using-sql-injection-to-bypass-authentication). 
 3. search users by first and/or last name.
 4. search users by userid;
 5. search all users whose salary is between X and Y. 
