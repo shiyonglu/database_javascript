@@ -1,63 +1,76 @@
-const express = require('express') // Imports the express module, which is a web application framework for Node.js. It simplifies routing and handling HTTP requests.
+require("dotenv").config();       // Load environment variables from .env
+const express = require("express");
+const mysql = require("mysql2");  // Better maintained than mysql
+const cors = require("cors");
 
-const mysql = require('mysql')  //  Imports the mysql module, which allows Node.js to interact with MySQL databases.
+const app = express();
 
-const cors = require ('cors') // Imports the cors module, which enables Cross-Origin Resource Sharing, allowing your server to handle requests from different origins.
+// Middleware
+app.use(cors());
+app.use(express.json());
 
+// Debug: Print env variables (commented by default)
+// console.log("DB Config:", {
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD ? "****" : "(empty)", // hide real password
+//     database: process.env.DB_NAME,
+//     port: process.env.DB_PORT
+// });
 
-const app = express() // Creates an instance of an Express application.
-app.use(cors()) // Applies the CORS middleware to the Express app.
-
-
+// Database connection
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "test",
-    port: 3306
-})
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_NAME || "test",  // 👈 default is "test"
+    port: process.env.DB_PORT || 3306
+});
 
-// let's see whether we can connect to the database successfully or not
+// Test DB connection
 db.connect((err) => {
     if (err) {
-        console.error('Database connection failed: ' + err.stack);
+        console.error("❌ Database connection failed:", err.stack);
         return;
     }
-    console.log('Connected to the database.');
+    console.log("✅ Connected to the database.");
 });
 
-
-app.use(cors());
-
-// when the browser points to localhost:8081/
-app.get('/', (request, response) => { 
-     return response.json("Welcome to the DB class.")
+// Routes
+app.get("/", (req, res) => {
+    res.json("Welcome to the DB class.");
 });
 
-// when the browser points to localhost:8081/listall
-app.get('/listall', (request, response) => {
-    const stmt = "SELECT * FROM students"
+app.get("/listall", (req, res) => {
+    const stmt = "SELECT * FROM students";
     db.query(stmt, (err, data) => {
-        if(err) return response.json(err)
-        else return response.json(data)
-    })
-});
-
-// when the browser points to localhost:8081/student/x, where x = 1, 2, 3...
-app.get('/student/:id', (request, response) => {
-    const studentId = request.params.id; // Extract the ID from the URL
-    console.log(`Fetching student with ID: ${studentId}`);
-    
-    const sql = "SELECT * FROM students WHERE id = ?";
-    db.query(sql, [studentId], (err, data) => {
-        if (err) return response.json(err);
-        if (data.length === 0) return response.status(404).json({ message: "Student not found" });
-        return response.json(data[0]); // Return the student object
+        if (err) {
+            console.error("DB error:", err);
+            return res.status(500).json({ error: "Database query failed" });
+        }
+        return res.json(data);
     });
 });
 
+app.get("/student/:id", (req, res) => {
+    const studentId = req.params.id;
+    console.log(`Fetching student with ID: ${studentId}`);
 
-// set up the web server listener
-app.listen(8081, () => {
-    console.log("I am listening.")
+    const sql = "SELECT * FROM students WHERE id = ?";
+    db.query(sql, [studentId], (err, data) => {
+        if (err) {
+            console.error("DB error:", err);
+            return res.status(500).json({ error: "Database query failed" });
+        }
+        if (data.length === 0) {
+            return res.status(404).json({ message: "Student not found" });
+        }
+        return res.json(data[0]);
+    });
+});
+
+// Start server
+const PORT = process.env.PORT || 8081;
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
 });

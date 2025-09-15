@@ -1,58 +1,118 @@
-In this project, you will create a simple Web-based app using mysql, nodejs and react.
+# Full Stack MySQL + Node.js + React Project
 
-**Exercise description**
-1. Watch video: https://www.youtube.com/watch?v=Q3ixb1w-QaY
-2. Run the sample code according to the video and the instructions given below.
-3. Install nodejs and npm, and packages including express, mysql, cors, and nodemon.
-4. Change the frontend code (index.html, main.jsx, and App.jsx) and the backend code (server.js) from the sample code to display the results of running 10 SELECT statements, each of them should select from at least TWO tables and its where clause has at least two conditions.  
+## 📌 Project Description
+This project demonstrates a **full stack web application** setup using three main layers:
 
-     Example 1: ```SELECT crscode FROM Students, Transcript WHERE students.id = Transcript.studentid AND transcipt.semester = 'Fall2007'```
-     Exmaple 2: ```SELECT People.name FROM People, Hobbies WHERE People.id = Hobbies.peopleid and Hobbies.hobby = 'swimming' ```
+- **Database (XAMPP / MySQL + phpMyAdmin):** used to create and manage the relational database.  
+- **Backend (Node.js + Express):** provides REST APIs to interact with the database.  
+- **Frontend (React + Vite):** displays the query results in the browser.  
 
-5. The code should be running to deserve full credits. Submit all SQL statements in a file called sql.txt. 
+Together, these components form a simple but complete **full stack web-based app**.
 
-Note: grading is based on your fluency of SQL, the success execution result of server.js showing on the web browser and your explanation skill of the result. 
+---
 
----------------------------------------------------------------------------------------------------------
+## ⚙️ How to Run the Project
 
-**How to run the given sample code**
+### 1. Database Setup (XAMPP / phpMyAdmin)
+1. Start XAMPP and make sure **Apache** and **MySQL** services are running.  
+2. Open **phpMyAdmin** (http://localhost/phpmyadmin).  
+3. Create a database called `test` (or use the name you plan to put in `.env`).  
+4. Run the following SQL to create the `students` table:
 
-To get the sample project working: 
-1. In your file system, create a directory called ```reactmysql``` as your project directory. 
-2. Under ```reactmysql```, create directory ```Backend```. 
-3. Copy the files under Backend (under https://github.com/shiyonglu/database_javascript/tree/main/exercise3) to Backend.
-4. Create a table called students in the ``test`` database as follows:
-
-```SQL
-CREATE TABLE students (id SMALLINT, name VARCHAR(100), birthday DATE, gpa FLOAT);
+```sql
+CREATE TABLE students (
+  id SMALLINT, 
+  name VARCHAR(100), 
+  birthday DATE, 
+  gpa FLOAT
+);
 
 INSERT INTO students VALUE (1, "peter", '1988-08-22', 3.1);
-
 INSERT INTO students VALUE (2, "kathy", '1997-08-12', 3.2);
-
 INSERT INTO students VALUE (3, "mike", '1999-08-02', 3.3);
-
 INSERT INTO students VALUE (4, "john", '1998-06-13', 3.7);
-
 ```
 
-5. cd Backend
-6. npm init -y
-7. npm install express mysql cors nodemon
-8. Modify the scripts section of the Backend/package.json as follows:
+You may add additional tables (like `Transcript`, `Courses`, etc.) to use in your queries.
 
-```javascript
- "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-  },
-```
-9. Start the backend: 1) ```cd Backend```, and run ```npm start```.
-10. Now you can access the Backend endoints directly. For example, you can point your brower to [http://localhost:8081](http://localhost:8081) and [http://localhost:8081/listall](http://localhost:8081/listall). The later should show the content of the students table in JSON format.
-12. At the project home directory, run ```npm create vite@latest```, type ```Frontend``` as the project name, and choose ```react``` and ```javascript```.
-14. Replace the App.jsx file under Frontend/src by the one under https://github.com/shiyonglu/database_javascript/tree/main/exercise3/Frontend. Open a new terminal to run the following commands.
-15. cd Frontend
-16. Run ```npm install```
-17. Run ```npm run dev``` and then point your browser to ```http://localhost:5173/``` which should show the page that displays the query result of the students table. 
+---
 
+### 2. Backend Setup (Node.js + Express)
+1. Open a terminal in the `Backend` folder.  
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
+3. Environment setup:  
+   - In the `Backend` folder you will find a file named **`sample.env`**.  
+   - **Rename** it to **`.env`**  
+   - **Edit** the file to include your own **phpMyAdmin/MySQL credentials** and database name.  
 
+   Example `.env`:  
+   ```env
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=
+   DB_NAME=testdb
+   DB_PORT=3306
+   PORT=8081
+   ```
+
+   ⚠️ Note: Never upload `.env` to GitHub — only keep `sample.env` as a template.  
+
+4. Start the backend server:  
+   ```bash
+   npm start
+   ```
+5. Verify it works:  
+   - [http://localhost:8081](http://localhost:8081) → backend welcome message  
+   - [http://localhost:8081/listall](http://localhost:8081/listall) → JSON output of `students` table  
+
+You will also see logs in the **VS Code terminal** when the backend starts and handles requests.
+
+---
+
+### 3. Frontend Setup (React + Vite)
+1. Open a terminal in the `Frontend` folder.  
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
+3. Start the frontend app:  
+   ```bash
+   npm run dev
+   ```
+4. Open your browser at:  
+   - [http://localhost:5173](http://localhost:5173) → displays query results from the backend  
+
+💡 **Output Explanation:**  
+- In the **VS Code terminal**, you will see logs of API calls (from frontend → backend).  
+- In the **browser**, you will see the homepage layout (from `App.jsx` + CSS) showing the query results in a table.  
+
+✅ The correct output should look like this:
+
+| id | name  | birthday  | gpa |
+|----|-------|-----------|-----|
+| 1  | peter | 8/22/1988 | 3.1 |
+| 2  | kathy | 8/12/1997 | 3.2 |
+| 3  | mike  | 8/2/1999  | 3.3 |
+| 4  | john  | 6/13/1998 | 3.7 |
+
+---
+
+## 📄 Deliverables
+- Working **Backend** and **Frontend** apps.  
+- `sql.txt` file containing all **10 SQL queries**.  
+- GitHub repo including:  
+  - `Backend/` and `Frontend/` folders  
+  - A `.env` file created locally (with your phpMyAdmin info, **not uploaded**)  
+  - `.gitignore` excluding `.env` and `node_modules`  
+  - Updated `README.md`  
+
+---
+
+## ✅ Grading Notes
+- Your grade is based on:  
+  - Correctness and fluency of **SQL queries**  
+  - Successful **execution** of the backend and frontend  
+  - Ability to **explain the results** clearly  
