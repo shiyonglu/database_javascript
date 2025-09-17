@@ -4,7 +4,7 @@ In this project, you will create a user table and then use it to register a new 
 
 Watch this video: https://www.youtube.com/watch?v=vrj9AohVhPA
 
-Explanation of the soruce code: [video 1](https://canvas.wayne.edu/courses/212289/discussion_topics/1597303), [video 2](https://www.youtube.com/watch?v=MaBphsJLrGY)
+Explanation of the soruce code: [video 1](https://www.youtube.com/watch?v=XBJRBB14ijY), [video 2](https://www.youtube.com/watch?v=MaBphsJLrGY)
 
 Please implement the following interface and functoinalty: 
 1. User registration.
