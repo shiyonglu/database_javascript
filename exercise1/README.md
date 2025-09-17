@@ -1,5 +1,5 @@
 1. Access online SQL at: https://www.programiz.com/sql/online-compiler/
-2. Create 10 tables using SQL CREATE table statements; 
+2. Create 10 tables using SQL CREATE table statements; Make sure to delete all statements in the box before typing a new one.
 3. INSERT at least 10 tuples into each of the above table using the INSERT statements;
 4. Execute 10 DELETE statements (for whatever table), each statement should be different from each other;
 5. Execute 10 UPDATE statements (for whatever table), each statement should be different from each other.
