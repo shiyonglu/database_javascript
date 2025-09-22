@@ -47,7 +47,7 @@ doenv is a file that you need to customize and rename it to .env to work.
 4. You can configure parameters directly in dbServices.js and app.js. Here, we achieve this by configuring parameters using the .env file. Configure the MySql database according to ```C:\xampp\htdocs\database_javascript\project1\Backend\dotenv```, that is, to create a database called ```web_app``` and a user ```john``` with password ```1234``` via the Admin interface ```http://localhost/phpmyadmin/```. The user ```john``` will be granted with all priviledges for the ```web_app``` database. To get started, you might also change the dotenv file as follows to only use the root user:
 ```javascript
 PORT=5050
-USER=root
+DB_USER=root
 PASSWORD=
 DATABASE=web_app
 DB_PORT=3306
