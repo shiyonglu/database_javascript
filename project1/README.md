@@ -72,6 +72,8 @@ create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), da
 12. Feel free to access some of the Backend endpoints directly such as [http://localhost:5050/getAll](http://localhost:5050/getAll). You will only receive JSON data without nice rendering. 
 13. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html).
 
+If you need to learn more about nodejs and react: [Learn nodejs by examples](https://github.com/shiyonglu/database_javascript/tree/main/nodejs_examples). [Learn react by examples](https://github.com/shiyonglu/database_javascript/tree/main/react_examples). 
+
 ---------------------------------------
 Some tips: 
 1. In Mac, to see what process runs on port 5000, type ```lsof -i:5000```
