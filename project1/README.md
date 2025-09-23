@@ -59,18 +59,10 @@ HOST=localhost
 create table names (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), date_added DATE);
 ```
 7. Go the Backend directory ```C:\xampp\htdocs\database_javascript\project1\Backend```.
-8. npm init -y
-9. npm install express mysql cors nodemon dotenv
-10. Modify the scripts section of the Backend/package.json as follows:
-```javasript
-    "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
-  },
-```
-11. Start the Backend by running ```npm start```.
-12. Feel free to access some of the Backend endpoints directly such as [http://localhost:5050/getAll](http://localhost:5050/getAll). You will only receive JSON data without nice rendering. 
-13. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html).
+8. npm install express mysql cors nodemon dotenv
+9. Start the Backend by running ```npm start```.
+10. Feel free to access some of the Backend endpoints directly such as [http://localhost:5050/getAll](http://localhost:5050/getAll). You will only receive JSON data without nice rendering. 
+11. Now you can interact with the Frontend [http://localhost/database_javascript/project1/Frontend/index.html](http://localhost/database_javascript/project1/Frontend/index.html).
 
 Finlay, if you need to learn more about nodejs and react: [Learn nodejs by examples](https://github.com/shiyonglu/database_javascript/tree/main/nodejs_examples). [Learn react by examples](https://github.com/shiyonglu/database_javascript/tree/main/react_examples). 
 
