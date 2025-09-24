@@ -8,7 +8,6 @@ let instance = null;
 
 
 // if you use .env to configure
-/*
 console.log("HOST: " + process.env.HOST);
 console.log("DB USER: " + process.env.DB_USER);
 console.log("PASSWORD: " + process.env.PASSWORD);
@@ -22,9 +21,10 @@ const connection = mysql.createConnection({
      database: process.env.DATABASE,
      port: process.env.DB_PORT
 });
-*/
+
 
 // if you configure directly in this file, there is a security issue, but it will work
+/*
 const connection = mysql.createConnection({
      host:"localhost",
      user:"root",        
@@ -32,7 +32,7 @@ const connection = mysql.createConnection({
      database:"web_app",
      port:3306
 });
-
+*/
 
 
 connection.connect((err) => {
