@@ -1,0 +1,62 @@
+Youtube videos for the DB class
+
+Ch0: An Introduction of the Instructor and the Course
+
+
+Ch1: Overview of Database and Transaction Processing
+https://youtu.be/9CjoP-VquDM
+
+Ch2: The Big Picture
+https://youtu.be/GXGlaCIf174
+
+Ch3: The Relational Model
+Lecture 1: https://youtu.be/FMvVV530Roc
+Lecture 2: https://youtu.be/o9k4sV8v1ME
+Lecture 3: https://youtu.be/x1jT3kllAKk
+
+Ch4: Database Design I: The Entity-Relationship Model
+Lecture 1: https://youtu.be/h8YEgXpdwWg
+Lecture 2: https://youtu.be/KyiSQ0rhbec
+Lecture 3: https://youtu.be/IpWC42-2oFs
+Lecture 4: https://youtu.be/blk7UswIbac
+Lecture 5: https://youtu.be/846seiVYg5U
+
+Ch5: Relational Algebra and SQL
+Lecture 1 (9/30): https://youtu.be/-Z2_Q7z03z0 
+Lecture 2 (10/5): https://youtu.be/GgEpU-w2vd4 
+Lecture 3 (10/7): https://youtu.be/vI6oUwVE95Q
+Lecture 4: (10/12) https://youtu.be/Y1pzgGgkgfg
+Lecture 5: (10/14) https://youtu.be/okFhAU-GiVM
+Lecture 6: (10/19) https://youtu.be/ncrkxrzLQas
+Lecture 7: (10/21) https://youtu.be/nXA25yQ-bWs
+Lecture 8: (10/26) https://youtu.be/oBmdi0c0VXY
+
+Ch6: Relational Normalization Theory
+Lecture 1 (10/28): https://youtu.be/789Mck23DKs
+Lecture 2: (11/2) https://youtu.be/RzZ4Xx_rmmg
+Lecture 3: (11/4) https://youtu.be/QMQ9iJT3_6E
+Lecture 4: (11/9) https://youtu.be/gA-AseRX0PU
+Lecture 5: (11/11) https://youtu.be/1Rj8RSreGVk
+Lecture 6: (11/16) https://youtu.be/DiACWI6_LSA
+
+Ch7 (11/18): Triggers and Active Databases 
+ https://youtu.be/g_lzVtz9xJg
+
+Ch9: Physical data organization and indexing
+Lecture 1 (11/23): https://youtu.be/w2nO-zTpF8s
+Lecture 2 (11/25): https://youtu.be/CE30hKtW78E
+Lecture 3 (11/30): https://youtu.be/6PRFtsj4HWM
+
+Ch10: (12/2) The Basics of Query processing systems
+https://youtu.be/CL4VFHfLAec
+
+Ch11 (12/7): An overview of query optimization
+https://youtu.be/K3rwhZMNXZc
+
+Ch20 (12/9): An Introduction to XML
+https://youtu.be/cQxCp-o0gMc
+
+Ch22 (12/14): An introduction to NOSQL database systems
+https://youtu.be/sDzgweKsm_w
+
+----the end -----------------
