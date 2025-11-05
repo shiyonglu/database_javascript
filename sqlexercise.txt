@@ -1,1 +1,53 @@
+CREATE TABLE professor(	
+	ssn INTEGER,                
+	profname VARCHAR(50),               
+	status VARCHAR(10),                
+	PRIMARY KEY(ssn)
+);
+
+CREATE TABLE course(	
+	crscode CHAR(7),                
+	crsname VARCHAR(100),               
+	credit TINYINT,                
+	PRIMARY KEY(crscode)
+);
+
+CREATE TABLE taught(			
+	crscode CHAR(7),                	
+	semester MEDIUMINT,               	
+	ssn INTEGER,                	
+	PRIMARY KEY(crscode, semester),	
+	FOREIGN KEY(crscode) REFERENCES course(crscode),	FOREIGN KEY(ssn) REFERENCES professor(ssn)
+);
+
+INSERT INTO professor 
+              VALUES (1111, 'Smith', 'Full'), 	
+              (2222, 'John', 'Associate'),	
+              (3333, 'Thomas', 'Associate'),	
+              (4444, 'Kathy', 'Assistant'),	
+              (5555, 'Peter', 'Full');
+
+
+INSERT INTO course 	
+	VALUES('CSC6710', 'Database course I', 3), 	
+	('CSC7710', 'Database II', 3),	
+	('CSC4710', 'Introduction to Database', 3),	
+	('CSC3020', 'Java Programming', 3),
+       	('CSC4110', 'Software engineering', 3),	
+	('CSC8710', 'Big Data Management', 3);
+
+
+INSERT INTO taught	
+	VALUES('CSC6710', 20172, 1111), 	
+	('CSC7710', 20172, 1111),
+                ('CSC4710', 20172, 1111),
+                ('CSC3020', 20172, 1111),		
+	('CSC4710', 20150, 2222),	
+	('CSC3020', 20151, 2222),
+	('CSC6710', 20190, 2222),
+	('CSC7710', 20190, 2222),
+                ('CSC7710', 20180, 3333),
+	('CSC8710', 20162, 1111),
+                ('CSC6710', 20152, 5555),
+	('CSC4110', 20172, 1111);
 
