@@ -3,7 +3,9 @@
 3. INSERT at least 10 tuples into each of the above table using the INSERT statements;
 4. Execute 10 DELETE statements (for whatever table), each statement should be different from each other;
 5. Execute 10 UPDATE statements (for whatever table), each statement should be different from each other.
-6. Please explain in voice and show in your video the result of each statement. Submit all SQL statements in a file called sql.txt. 
+6. Execute each kind of statement one more time, but this time, use ChatGpt to create the statement first and then copy and paste it into the SQL console and execute.
+   Use prompt like "Create an INSERT statement for the Students table using common names and resonable ramdom data."
+8. Please explain in voice and show in your video the result of each statement. Submit all SQL statements in a file called sql.txt. 
 
 
 Note: The grading will be based on your fluency of SQL and explanation skill of the result. 
