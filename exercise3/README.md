@@ -10,7 +10,8 @@ In this project, you will create a simple Web-based app using mysql, nodejs and 
      Example 1: ```SELECT crscode FROM Students, Transcript WHERE students.id = Transcript.studentid AND transcipt.semester = 'Fall2007'```
      Exmaple 2: ```SELECT People.name FROM People, Hobbies WHERE People.id = Hobbies.peopleid and Hobbies.hobby = 'swimming' ```
 
-5. The code should be running to deserve full credits. Submit all SQL statements in a file called sql.txt. 
+5. Change the code so that there will be a button when clicked, will return the current prices of top 10 crypto in a table. Use prompt in ChatGpt such as "return the current prices of top 10 cryptos in market cap in json format, nothing else."
+6. The code should be running to deserve full credits. Submit all SQL statements in a file called sql.txt. 
 
 Note: grading is based on your fluency of SQL, the success execution result of server.js showing on the web browser and your explanation skill of the result. 
 
