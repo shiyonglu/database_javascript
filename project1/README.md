@@ -18,7 +18,12 @@ Please implement the following interface and functoinalty:
 9. Search users who registered on the same day that john registered. 
 10. Return the users who registered today;
 
-Show and explain the results above in a video. Submit all SQL statements in a file called sql.txt. 
+In addition, you will demonstate your github skills in collaboration with your partner: 
+    - Repositories (local vs remote)
+    - Clone / Pull / Fetch
+    - Add / Commit / Push
+
+Show and explain the results, including github operations, in a video. Submit all SQL statements in a file called sql.txt. 
 
 Consider to create the user table using the following CREATE TABLE stmt (feel free to revise it): 
 
