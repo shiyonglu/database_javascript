@@ -16,8 +16,10 @@ It helps answer the real questions:
 Behind the scenes, SmartExcel uses AI (without requiring any chat prompts) to generate:
 
 - A **1-month probability map** across important price levels.  Thinking probabilistically helps you: 1) Avoid all-in predictions; 2) Size positions rationally; 3) Prepare for downside and upside; and 4) Reduce emotional reactions
-- A **personalized dip-based DCA ladder** based on your budget and risk style
-- A short explanation of the current market structure
+- A **personalized dip-based DCA ladder** based on your budget and risk style. Instead of reacting to fear or hype, you pre-define where and how much to buy.
+This prevents panic selling during drops and FOMO buying during pumps.
+- A short explanation of the current market structure. When markets move quickly, emotions take over.
+A structured explanation anchors decisions to objective conditions rather than fear or hype.
 
 The goal is simple:
 
