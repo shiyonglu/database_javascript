@@ -216,18 +216,20 @@ Must include:
 
 #### Example Output
 
-| Price Level | Allocation |
-|------------|------------|
-| 62K | 20% |
-| 58K | 25% |
-| 54K | 30% |
-| 50K | 25% |
+Assume:
+- Available budget: $20,000
+- No dry powder reserved
+- Ladder depth: 4 rungs
 
-Must also show:
+| Price Level | Allocation | Dollar Amount |
+|------------|------------|---------------|
+| 62K | 20% | $4,000 |
+| 58K | 25% | $5,000 |
+| 54K | 30% | $6,000 |
+| 50K | 25% | $5,000 |
 
-- Dollar amount per rung
-- Remaining powder visualization
-
+Total Allocated: $20,000  
+Remaining Dry Powder: $0
 ---
 
 ## 5. Promptless AI Integration Design
