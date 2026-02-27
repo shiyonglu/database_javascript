@@ -1,5 +1,28 @@
 # 📘 SmartExcel: DCA Planner For Bitcoin Investment 
-## Promptless AI for Probabilistic Modeling and Dip-Based DCA Planning
+
+## Summary  
+
+SmartExcel is a Bitcoin investor dashboard built to help long-term holders make disciplined decisions instead of reacting emotionally to market volatility. It combines the key indicators serious Bitcoin investors follow — the Crypto Fear & Greed Index, live BTC price charts, the 200-week moving average, and Realized Price — into one clean, structured interface.
+
+But SmartExcel goes beyond charts.
+
+It helps answer the real questions:
+
+- Where are we in the cycle?
+- Are we near long-term support or overheated levels?
+- What are the likely price zones over the next month?
+- How should I structure my dip-buying plan?
+
+Behind the scenes, SmartExcel uses AI (without requiring any chat prompts) to generate:
+
+- A **1-month probability map** across important price levels
+- A **personalized dip-based DCA ladder** based on your budget and risk style
+- A short explanation of the current market structure
+
+The goal is simple:
+
+Help Bitcoin investors deploy capital systematically, manage risk thoughtfully, and stay aligned with a long-term strategy — instead of chasing pumps or panic-selling during corrections.
+
 
 ---
 
