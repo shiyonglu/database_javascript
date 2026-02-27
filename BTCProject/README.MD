@@ -1,453 +1,373 @@
-📘 Capstone Project Requirement Analysis Report
-Project Title
+# 📘 BTC Structural Intelligence Dashboard  
+## Promptless AI for Probabilistic Modeling and Dip-Based DCA Planning
 
-BTC Structural Dashboard: A Quantitative Decision-Support Platform for Bitcoin Investors
+---
 
-1. Project Overview
+## 1. Project Overview
 
-This project aims to design and deploy a web-based Bitcoin investor dashboard on Amazon EC2 that integrates real-time market data with structural long-term indicators and quantitative decision models.
+This capstone project builds and deploys a Bitcoin investor dashboard on **Amazon EC2** that combines:
 
-Unlike typical price-tracking websites, this platform emphasizes:
+- Real-time market data (Fear & Greed index, BTC price curve)
+- Structural anchors (200-week EMA and Realized Price)
+- A 1-month probabilistic distribution model across psychologically and structurally meaningful price ranges
+- A personalized, dip-based DCA ladder plan based on the user’s current BTC position and future budget
 
-Structural anchors (200-week EMA & Realized Price)
+Unlike typical dashboards, this system includes a **promptless AI engine (ChatGPT)** used internally to:
 
-Psychological price boundaries
+- Generate the probability model  
+- Generate the dip-based DCA ladder  
+- Provide human-readable rationale  
 
-Probabilistic short-term range modeling
+The UI does **not** expose a chat box or require user prompts. AI operates invisibly behind the scenes.
 
-Personalized dip-based DCA planning
+---
 
-The system will provide disciplined, data-driven guidance rather than speculative signals.
-
-2. Project Objectives
-
-The platform must:
-
-Display real-time Crypto Fear & Greed Index
-
-Display live Bitcoin price chart
-
-Calculate and visualize:
-
-200-week EMA
-
-Realized Price
-
-Current structural position
-
-Generate a 1-month probabilistic BTC range model
-
-Generate dip-based DCA strategy based on:
-
-Current BTC position
-
-Available capital
-
-Deploy on Amazon EC2 with production-ready architecture
-
-3. Functional Requirements
-3.1 Real-Time Market Dashboard
-Feature 1: Fear & Greed Index
-
-Data Source: alternative.me API
-Requirements:
-
-Fetch daily index value
-
-Display:
-
-Numeric score (0–100)
-
-Classification (Extreme Fear → Extreme Greed)
-
-Historical 30-day mini-chart
-
-Auto-refresh every 5 minutes
-
-Feature 2: Live Bitcoin Price Chart
-
-Data Source: CoinGecko API
-
-Requirements:
-
-Real-time BTC price (USD)
-
-30-day price curve
-
-Zoomable chart (7D, 30D, 90D, 1Y)
-
-Candlestick option (bonus feature)
-
-3.2 Structural Position Module
-Feature 3: Structural Anchors
-
-The system must calculate:
-
-(A) 200-Week EMA
-
-Formula:
-EMA_t = α × Price_t + (1−α) × EMA_(t−1)
-
-Data needed:
-
-Weekly historical price (at least 4 years)
-
-Output:
-
-Overlay 200W EMA on price chart
-
-Display:
-
-Distance from EMA (%)
-
-Price position category:
-
-Below EMA
-
-Near EMA
-
-Above EMA
-
-(B) Realized Price
-
-Definition:
-Realized Cap / Circulating Supply
-
-Data Source:
-
-Glassnode API (if available) or simulated using historical dataset
-
-Display:
-
-Realized price line
-
-Distance to realized price
-
-Position classification:
-
-Capitulation zone
-
-Accumulation zone
-
-Speculative zone
-
-Structural Position Summary
-
-System must generate automatic interpretation such as:
-
-“BTC is 18% above 200W EMA”
-
-“BTC is 35% above realized price”
-
-“Structural positioning: Mid-cycle”
-
-3.3 Probabilistic 1-Month BTC Range Model
-Feature 4: Range-Based Probability Model
+## 2. Project Objectives
 
 The system must:
 
-Define psychological/structural boundaries:
+1. Show Crypto Fear & Greed Index (current + short history)
+2. Show live BTC price curve
+3. Compute and visualize 200W EMA and Realized Price
+4. Identify current structural position relative to anchors
+5. Generate:
+   - 1-month probability distribution across price ranges
+   - Dip-based DCA ladder customized to user inputs
+6. Use AI internally for generation and explanation
+7. Deploy securely on AWS EC2
 
-50K
+---
 
-60K
+## 3. System Architecture
 
-70K
+### 3.1 Components
 
-80K
+**Frontend (React)**
+- Dashboard UI
+- Charts and visualizations
+- Structured forms (no free-text prompt inputs)
 
-100K
+**Backend (FastAPI or Node/Express)**
+- Data ingestion and caching
+- Indicator computation (EMA, structural metrics)
+- LLM Orchestrator (ChatGPT integration)
+- Output validation and guardrails
+- Optional snapshot storage
 
-Generate probability distribution across ranges:
+**External Data Sources**
+- Alternative.me (Fear & Greed Index)
+- CoinGecko (BTC price and OHLC data)
+- Optional realized price dataset (Glassnode or offline dataset)
 
-Example output:
+**Deployment**
+- Amazon EC2 (Ubuntu)
+- Nginx reverse proxy
+- HTTPS (SSL)
+- Environment variables for API keys
+- Logging and monitoring
 
-Price Range	Probability (1 Month)
-< 60K	30%
-60–70K	40%
-70–80K	20%
-> 80K	10%
-Modeling Approaches (Team Must Choose One)
+---
 
-Option A: Monte Carlo simulation
-Option B: GARCH volatility model
-Option C: Historical volatility + drift
-Option D: Hybrid structural + sentiment weighted model
+## 4. Functional Requirements
 
-Model must:
+---
 
-Update daily
+### 4.1 Market Data Dashboard
 
-Explain methodology
+#### Feature 1: Fear & Greed Index Panel
 
-Output visual probability bar chart
+- Fetch current value + last 30 values
+- Display:
+  - Score (0–100)
+  - Regime label (Extreme Fear → Extreme Greed)
+  - Mini historical chart
+- Periodic refresh with caching
 
-3.4 Dip-Based DCA Engine
-Feature 5: Personalized DCA Strategy Generator
+---
 
-User inputs:
+#### Feature 2: BTC Live Price & Chart
 
-Current BTC position (USD value)
+- Display current BTC price (USD)
+- Chart modes: 7D / 30D / 90D / 1Y
+- Optional candlestick mode
+- Overlay:
+  - 200W EMA
+  - Realized Price
 
-Available capital
+---
 
-Risk preference (Conservative / Moderate / Aggressive)
+### 4.2 Structural Position Module
 
-System outputs:
+#### Feature 3: 200-Week EMA
 
-Example:
+- Compute 200W EMA from weekly closing data
+- Display distance from EMA (%)
+- Tag status:
+  - Below EMA
+  - Near EMA
+  - Above EMA
 
-If BTC drops to:
+---
 
-62K → Deploy 20%
+#### Feature 4: Realized Price
 
-58K → Deploy 30%
+- Display realized price line
+- Compute distance from realized price (%)
+- Classify regime:
+  - Capitulation
+  - Accumulation
+  - Speculative
 
-54K → Deploy 30%
+---
 
-50K → Deploy 20%
+#### Feature 5: Structural Summary
 
-Requirements:
+- Compute structural state
+- Display concise summary card
+- Generate short explanation (AI-generated from structured JSON)
 
-Respect psychological boundaries
+---
 
-Respect structural anchor zones
+## 4.3 AI-Generated 1-Month Probability Distribution Model
 
-Prevent full capital deployment too early
+### Feature 6: Boundary-Aware Range Selection
 
-Provide “Powder Remaining” visualization
+Boundaries must incorporate:
 
-4. Non-Functional Requirements
-4.1 Performance
+**Psychological boundaries**
+- 50K
+- 60K
+- 70K
+- 80K
+- 100K
 
-Page load < 3 seconds
+**Structural boundaries**
+- 200W EMA
+- Realized price
+- Recent swing highs/lows
 
-API response handling < 1 second
+AI may propose boundaries, but backend enforces:
 
-Efficient caching
+- Ordered unique values
+- 4–8 total bands
+- At least one structural boundary if relevant
+- Schema validation
 
-4.2 Reliability
+---
 
-Graceful handling of API failures
+### Feature 7: Probability Assignment
 
-Fallback data mechanism
+AI generates probability distribution for a 1-month horizon using:
 
-Logging system
+- Recent volatility
+- Fear & Greed regime
+- Distance to structural anchors
+- Trend indicators (e.g., 30D momentum)
 
-4.3 Security
+#### Required Output
 
-HTTPS enabled
+| Price Range | Probability |
+|------------|------------|
+| < 60K | XX% |
+| 60–70K | XX% |
+| 70–80K | XX% |
+| > 80K | XX% |
 
-Rate limiting
+Must include:
 
-API keys stored securely (environment variables)
+- Histogram visualization
+- Tail risk indicator
+- Short model explanation
 
-No private wallet information stored
+#### Backend Validation Rules
 
-4.4 Scalability
+- Probabilities sum to 1.0 (100%)
+- No negative values
+- Schema enforcement
+- No hallucinated numbers
 
-Modular backend architecture
+---
 
-Docker containerization (bonus)
+## 4.4 AI-Generated Dip-Based DCA Planning Engine
 
-Future migration to AWS Elastic Beanstalk or ECS
+### Feature 8: DCA Ladder Generator
 
-5. System Architecture
-Proposed Stack
-Frontend
+#### User Inputs (Form-Based)
 
-React.js
+- Current BTC position ($)
+- Available budget ($)
+- Risk profile (Conservative / Moderate / Aggressive)
+- Ladder depth (4 / 6 / 8 rungs)
+- Optional dry powder percentage
 
-Chart.js or TradingView charting library
+#### AI Generates
 
-Backend
+- Price trigger levels
+- Allocation per rung
+- Optional adjustment rules
 
-Python (FastAPI) OR Node.js (Express)
+#### Hard Constraints (Backend Enforced)
 
-RESTful APIs
+- Allocations sum to 100% of deployable budget
+- Minimum and maximum allocation per rung
+- Monotonically decreasing price levels
+- Respect dry powder constraint
+- No leverage recommendations
 
-Scheduled background jobs
+#### Example Output
 
-Data Sources
+| Price Level | Allocation |
+|------------|------------|
+| 62K | 20% |
+| 58K | 25% |
+| 54K | 30% |
+| 50K | 25% |
 
-CoinGecko API
+Must also show:
 
-Alternative.me API
+- Dollar amount per rung
+- Remaining powder visualization
 
-Glassnode API (optional)
+---
 
-Deployment
+## 5. Promptless AI Integration Design
 
-Amazon EC2 (Ubuntu)
+### No Prompt UI Policy
 
-Nginx reverse proxy
+- No chat box
+- No free-text user input
+- AI invoked only via button clicks or structured forms
 
-PM2 (if Node)
+---
 
-Gunicorn (if Python)
+### LLM Orchestrator Endpoints (Backend)
 
-6. Team Role Distribution (4–5 Members)
-Member 1 – Backend Engineer
+- `POST /ai/generate-boundaries`
+- `POST /ai/generate-probabilities`
+- `POST /ai/generate-dca`
+- `POST /ai/generate-insights`
 
-API integration
+Each endpoint must:
 
-EMA computation
+- Provide structured JSON context
+- Enforce strict schema on LLM output
+- Validate correctness before returning to frontend
 
-Monte Carlo simulation
+---
 
-Member 2 – Quantitative Modeling Lead
+### Safety and Guardrails
 
-Probability model
+- Outputs framed as decision support
+- No guaranteed returns
+- No explicit “buy now” or “sell now” commands
+- Strict schema validation
+- Regeneration or fallback if validation fails
 
-Structural boundary logic
+---
 
-DCA engine
+## 6. Non-Functional Requirements
 
-Member 3 – Frontend Developer
+### Performance
 
-Dashboard UI
+- Page load < 3 seconds
+- AI generation target < 3–5 seconds
+- External API caching
 
-Charts
+### Reliability
 
-Data visualization
+- Graceful fallback if data APIs fail
+- LLM failure fallback model
+- Logging and monitoring
 
-Member 4 – DevOps Engineer
+### Security
 
-EC2 setup
+- HTTPS enabled
+- API keys via environment variables
+- Rate limiting
+- No wallet integration
 
-Deployment
+### Maintainability
 
-Security configuration
+- Modular architecture
+- Clear JSON schemas
+- Testable quant logic
 
-CI/CD pipeline
+---
 
-Member 5 (Optional) – Data Engineer / QA
+## 7. Deployment (AWS EC2)
 
-Data validation
+- Ubuntu EC2 instance
+- Nginx reverse proxy
+- Backend service via PM2 or Gunicorn
+- SSL configuration
+- Optional Docker containerization
+- Optional CI/CD (GitHub Actions)
 
-Caching
+---
 
-Testing framework
+## 8. Team Roles (4–5 Students)
 
-Performance optimization
+**Frontend Engineer**
+- UI, charts, ladder visualization
 
-7. Project Milestones (16 Weeks Example)
-Phase 1 (Weeks 1–3)
+**Backend Engineer**
+- APIs, indicators, caching
 
-Requirement refinement
+**AI Integration Engineer**
+- LLM orchestration
+- Schema enforcement
+- Guardrail logic
 
-Architecture design
+**Quant Modeling Engineer**
+- Baseline probability model
+- Calibration and evaluation
 
-API testing
+**DevOps / QA (Optional)**
+- EC2 setup
+- Security hardening
+- Testing suite
 
-Phase 2 (Weeks 4–7)
+---
 
-Frontend prototype
+## 9. Milestones (16 Weeks)
 
-Backend structure
+- Weeks 1–3: Architecture + API exploration
+- Weeks 4–6: Dashboard + data ingestion
+- Weeks 7–9: Structural anchor module
+- Weeks 10–12: AI distribution + DCA integration
+- Weeks 13–14: Deployment + security
+- Weeks 15–16: Testing + final demo
 
-EMA implementation
+---
 
-Phase 3 (Weeks 8–11)
+## 10. Deliverables
 
-Probability modeling engine
+- Deployed EC2 web application
+- GitHub repository
+- Technical documentation
+- Modeling methodology report
+- AI validation report
+- Final presentation/demo
 
-DCA module
+---
 
-Integration testing
+## 11. Evaluation Criteria
 
-Phase 4 (Weeks 12–14)
+- Correct indicator calculations
+- Robust probability + DCA generation
+- Safe and validated AI outputs
+- UI clarity
+- Cloud deployment reliability
+- Code modularity
 
-EC2 deployment
+---
 
-Security hardening
+## 12. Final Positioning
 
-Performance tuning
+This project delivers a promptless, AI-assisted Bitcoin decision dashboard that:
 
-Phase 5 (Weeks 15–16)
-
-Final testing
-
-Documentation
-
-Presentation & demo
-
-8. Risks and Mitigation
-Risk	Mitigation
-API rate limit	Cache data
-Glassnode cost	Use historical dataset
-Over-complex modeling	Choose simpler statistical model
-EC2 misconfiguration	Use deployment checklist
-9. Deliverables
-
-Fully deployed EC2 website
-
-GitHub repository
-
-Technical documentation
-
-Modeling methodology report
-
-Final presentation
-
-User manual
-
-10. Evaluation Criteria
-
-Correctness of financial calculations
-
-Robustness of probability modeling
-
-Code quality
-
-Cloud deployment reliability
-
-UI clarity
-
-Documentation completeness
-
-11. Advanced Extension Ideas (Optional)
-
-Add Solana comparison
-
-Add Fear index regime-based allocation
-
-Add regime detection (Bull/Bear/Transition)
-
-Add backtesting engine
-
-Add login and portfolio tracking
-
-12. Expected Learning Outcomes
-
-Students will learn:
-
-Cloud deployment (AWS EC2)
-
-Real-time API integration
-
-Financial time-series modeling
-
-Risk vs volatility distinction
-
-Full-stack system design
-
-Quantitative decision modeling
-
-Final Capstone Positioning
-
-This project is not just a price dashboard.
-
-It is:
-
-A structural, probabilistic, and discipline-driven decision-support system for Bitcoin investors.
-
-It combines:
-
-Quantitative finance
-
-Software engineering
-
-Cloud computing
-
-Behavioral finance
+- Computes structural anchors
+- Uses AI to generate probability distributions
+- Uses AI to generate personalized DCA ladders
+- Enforces guardrails for safety
+- Deploys on AWS EC2 as a production-grade capstone system
