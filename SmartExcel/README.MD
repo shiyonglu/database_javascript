@@ -15,7 +15,7 @@ It helps answer the real questions:
 
 Behind the scenes, SmartExcel uses AI (without requiring any chat prompts) to generate:
 
-- A **1-month probability map** across important price levels
+- A **1-month probability map** across important price levels.  Thinking probabilistically helps you: 1) Avoid all-in predictions; 2) Size positions rationally; 3) Prepare for downside and upside; and Reduce emotional reactions
 - A **personalized dip-based DCA ladder** based on your budget and risk style
 - A short explanation of the current market structure
 
