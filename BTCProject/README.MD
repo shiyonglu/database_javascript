@@ -1,4 +1,4 @@
-# 📘 BTC Structural Intelligence Dashboard  
+# 📘 SmartExcel: DCA Planner For Bitcoin Investment 
 ## Promptless AI for Probabilistic Modeling and Dip-Based DCA Planning
 
 ---
