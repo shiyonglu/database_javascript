@@ -228,8 +228,6 @@ Assume:
 | 54K | 30% | $6,000 |
 | 50K | 25% | $5,000 |
 
-Total Allocated: $20,000  
-Remaining Dry Powder: $0
 ---
 
 ## 5. Promptless AI Integration Design
