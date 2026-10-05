@@ -2,7 +2,7 @@
 
 In this project, you will create a user table and then use it to register a new user and then allows the user to sign into a website. This project will take 4 weeks. 
 
-Watch [video 1](https://www.youtube.com/watch?v=vrj9AohVhPA) to get a good understanding of an project example, and then watch  [video 2](https://www.youtube.com/watch?v=XBJRBB14ijY) and [video 3](https://www.youtube.com/watch?v=MaBphsJLrGY) for an explanation of the source code for the example project. 
+Watch [video 1](https://www.youtube.com/watch?v=vrj9AohVhPA) to get a good understanding of an example project, and then watch  [video 2](https://www.youtube.com/watch?v=XBJRBB14ijY) and [video 3](https://www.youtube.com/watch?v=MaBphsJLrGY) for an explanation of the source code for the example project. 
 
 Feel feee to reuse any code from the sample project,  implement the following interface and functoinalty: 
 1. User registration.
