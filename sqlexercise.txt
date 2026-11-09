@@ -23,7 +23,7 @@ CREATE TABLE taught(
 INSERT INTO professor 
               VALUES (1111, 'Smith', 'Full'), 	
               (2222, 'John', 'Associate'),	
-              (3333, 'Thomas', 'Associate'),	
+              (3333, 'Thomas', 'Full'),	
               (4444, 'Kathy', 'Assistant'),	
               (5555, 'Peter', 'Full'),
               (6666, 'Luke', 'Full'), 
