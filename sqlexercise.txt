@@ -38,7 +38,7 @@ INSERT INTO course
 	('CSC4710', 'Introduction to Database', 3),	
 	('CSC3020', 'Java Programming', 3),
     ('CSC4110', 'Software engineering', 3),
-	('CSC8610', 'Blockchain Security Analysis', 3);
+	('CSC8610', 'Blockchain Security Analysis', 3),
 	('CSC8710', 'Big Data Management', 3);
 
 
